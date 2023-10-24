@@ -17,10 +17,13 @@ topMenuEl.style.backgroundColor = "var(--top-menu-bg)"
 topMenuEl.classList.add("flex-around")
 console.log(topMenuEl.classList.contains("flex-around"))
 
-menuLinks.forEach(function(link){
+menuLinks.forEach(link =>{
+   //const newMenuLinks= document.createElement("a")
    const newMenuLinks= document.createElement("a")
-    newMenuLinks.setAttribute("href", link.href)
-    newMenuLinks.appendChild(topMenuEl)
+   //newMenuLinks.setAttribute("href", link.href)
+   newMenuLinks.setAttribute("href",link.href)
+   newMenuLinks.innerText= link.text
+    topMenuEl.appendChild( newMenuLinks)
     
 })
 console.dir(menuLinks)
